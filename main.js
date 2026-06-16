@@ -4,11 +4,24 @@ const apps = [
   {"name": "To-Do", "link": "./todo/", "icon": null},
   {"name": "Maze", "link": "./maze/", "icon": null},
   {"name": "Tables", "link": "./tables/", "icon": null},
-  {"name": "pomodoro", "link": "./pomodoro/", "icon": null},
+  {"name": "Pomodoro", "link": "./pomodoro/", "icon": null},
   {"name": "Notes", "link": "./notes/", "icon": null},
   {"name": "Calendar", "link": "./calendar/", "icon": null},
   {"name": "Drawing Pad", "link": "./drawing/", "icon": null},
-  {"name": "Currency Converter", "link": "./currency/", "icon": null}
+  {"name": "Currency Converter", "link": "./currency/", "icon": null},
+  {"name": "BMI Calculator", "link": "./bmi/", "icon": null},
+  {"name": "Quiz", "link": "./quiz/", "icon": null},
+  {"name": "Password Generator", "link": "./password-generator/", "icon": null},
+  {"name": "Unit Converter", "link": "./unit-converter/", "icon": null},
+  {"name": "Stopwatch", "link": "./stopwatch/", "icon": null},
+  {"name": "Tip Calculator", "link": "./tip-calculator/", "icon": null},
+  {"name": "Word Counter", "link": "./word-counter/", "icon": null},
+  {"name": "Weather", "link": "./weather/", "icon": null},
+  {"name": "Clock", "link": "./clock/", "icon": null},
+  {"name": "Memory Game", "link": "./memory/", "icon": null},
+  {"name": "Minesweeper", "link": "./minesweeper/", "icon": null},
+  {"name": "Piano", "link": "./piano/", "icon": null},
+  {"name": "Palette", "link": "./palette/", "icon": null}
 ]
 
 const grid = document.querySelector('.grid')
