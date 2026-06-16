@@ -43,6 +43,7 @@
   border: 0;
   font-size: 16px;
   cursor: pointer;
+  background-color: #f0f0f0;
 }
 
 .icon {
@@ -52,6 +53,15 @@
   margin-bottom: 4px;
   background: #e2e2e2;
   border: 1px dashed #010404;
+}
+
+.app:hover .icon {
+  background: #f0f0f0;
+  border: 1px solid #010404;
+}
+
+.app:hover .app-name {
+  color: deepskyblue;
 }
 
 .app-name {
@@ -65,9 +75,14 @@
   color: cornflowerblue;
 }
 
+
 .app-header {
   margin-bottom: 20px;
   font-size: 16px;
+}
+
+.app-section {
+  border: 1px solid #f0f0f0;
 }
 
 .hidden {
