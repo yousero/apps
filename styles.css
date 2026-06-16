@@ -1,0 +1,75 @@
+.main {
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  min-width: 660px;
+  margin: auto;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 64px);
+  place-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.grid>div {
+  height: 84px;
+  font-size: 0;
+}
+
+.section {
+  padding: 24px 12px;
+  border: 1px solid #010404;
+  font-size: 0;
+}
+
+.search {
+  height: 64px;
+  width: 100%;
+  border-radius: 0;
+  border: 1px solid #010404;
+  font-size: 32px;
+  outline: 0;
+  padding: 6px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.icon {
+  display: inline-block;
+  height: 64px;
+  width: 64px;
+  margin-bottom: 4px;
+  background: #e2e2e2;
+  border: 1px dashed #010404;
+}
+
+.app-name {
+  display: block;
+  width: 64px;
+  text-overflow: clip;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 10px;
+  text-align: center;
+  color: cornflowerblue;
+}
+
+.app-header {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+}
