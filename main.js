@@ -1,5 +1,5 @@
 const apps = [
-  {"name": "Calculator", "link": "./calculator/", "icon": null},
+  {"name": "Calculator", "link": "./calculator/", "icon": "./calculator/icons8-calculator-96.png"},
   {"name": "Snake", "link": "./snake/", "icon": null},
   {"name": "To-Do", "link": "./todo/", "icon": null},
   {"name": "Maze", "link": "./maze/", "icon": null},
