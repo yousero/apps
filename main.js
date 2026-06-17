@@ -21,6 +21,7 @@ const apps = [
   {"name": "Memory Game", "link": "./memory/", "icon": null},
   {"name": "Minesweeper", "link": "./minesweeper/", "icon": null},
   {"name": "Piano", "link": "./piano/", "icon": null},
+  {"name": "Ping Pong", "link": "./ping-pong/", "icon": null},
   {"name": "Palette", "link": "./palette/", "icon": null}
 ]
 

@@ -66,8 +66,8 @@ const btn0 = document.querySelector('#btn-0')
 
 const btnDivision = document.querySelector('#btn-division')
 const btnMultiplication =  document.querySelector('#btn-multiplication')
-const btnMinus = document.querySelector('#btnMinus')
-const btnAddition = document.querySelector('#btnAddition')
+const btnMinus = document.querySelector('#btn-minus')
+const btnAddition = document.querySelector('#btn-addition')
 
 const btnDot = document.querySelector('#btn-dot')
 const btnBackspace = document.querySelector('#btn-backspace')
@@ -91,3 +91,30 @@ for (let i = 0; i < buttons.length; ++i) {
     number.value += String(i)
   }, false)
 }
+
+const g = function (char) {
+  return function () {
+    f()
+    operation = char
+    number.value = ''
+  }
+}
+
+btnDivision.addEventListener('click', g('/'), false)
+btnMultiplication.addEventListener('click', g('*'), false)
+btnMinus.addEventListener('click', g('-'), false)
+btnAddition.addEventListener('click', g('+'), false)
+
+
+btnDot.addEventListener('click', function () {
+  number.value += '.'
+}, false)
+btnBackspace.addEventListener('click', function () {
+  number.value = number.value.slice(0, number.value.length - 1)
+}, false)
+btnEquals.addEventListener('click', function () {
+  f()
+  number.value = n
+  n = 0
+  operation = ''
+}, false)

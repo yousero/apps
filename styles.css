@@ -60,10 +60,6 @@
   border: 1px solid #010404;
 }
 
-.app:hover .app-name {
-  color: deepskyblue;
-}
-
 .app-name {
   display: block;
   width: 64px;
@@ -75,6 +71,15 @@
   color: cornflowerblue;
 }
 
+.app:hover .app-name {
+  color: deepskyblue;
+}
+
+.img-icon {
+  display: inline-block;
+  height: 64px;
+  width: 64px;
+}
 
 .app-header {
   margin-bottom: 20px;
