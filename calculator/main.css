@@ -39,13 +39,3 @@
   padding: 6px;
   direction: rtl;
 }
-
-@media screen and (max-width: 670px) {
-  .section {
-    border: 0;
-  }
-
-  .container {
-    min-width: 100%;
-  }
-}

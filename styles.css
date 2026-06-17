@@ -93,3 +93,18 @@
 .hidden {
   display: none;
 }
+
+
+@media screen and (max-width: 670px) {
+  .section {
+    border: 0;
+  }
+
+  .container {
+    min-width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 64px);
+  }
+}
