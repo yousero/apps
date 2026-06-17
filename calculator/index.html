@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>calculator</title>
+  <title>Calculator</title>
   <link rel="stylesheet" href="../basic.css">
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="main.css">
@@ -17,6 +17,7 @@
         <header class="app-header"><a href="../">Back</a></header>
         <div class="app-calc">
           <div class="calc-wrapper">
+            <!-- TODO: INPUT, HISTORY  -->
             <div><input type="text" name="number" id="number" class="calc-input" /></div>
             <div class="keypad">
               <div class="calc-row">
@@ -50,11 +51,14 @@
                 <button id="btn-equals" class="btn">=</button>
               </div>
             </div>
-            <div class="keypad-extend">
+            <div class="keypad-extend hidden">
               <div class="calc-row">
                 <button id="btn-back" class="btn">↩</button>
               </div>
               <!-- TODO: ADD BUTTONS  -->
+              <!-- ↩ sin cos tan 
+                   ! ^ log ln
+                   RND π e deg/rad -->
             </div>
           </div>
         </div>
