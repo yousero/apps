@@ -32,9 +32,9 @@ number.addEventListener('beforeinput', function (e) {
   }
 
   if (e.inputType === 'insertLineBreak' || char === '=') {
-    f()
-    number.value = n
-    n = 0
+    f()    
+    number.value = ''
+    answer.textContent = Math.round(n * 10000) / 10000
     operation = ''
     e.preventDefault()
     return
@@ -74,6 +74,7 @@ const btnBackspace = document.querySelector('#btn-backspace')
 const btnEquals = document.querySelector('#btn-equals')
 
 btnAC.addEventListener('click', function (e) {
+  answer.textContent = ''
   number.value = ''
   n = 0
   operation = ''
@@ -111,10 +112,13 @@ btnDot.addEventListener('click', function () {
 btnBackspace.addEventListener('click', function () {
   number.value = number.value.slice(0, number.value.length - 1)
 }, false)
+
+const answer = document.querySelector('#answer')
+
 btnEquals.addEventListener('click', function () {
   f()
-  number.value = n
-  n = 0
+  number.value = ''
+  answer.textContent = Math.round(n * 100) / 100
   operation = ''
 }, false)
 
