@@ -105,7 +105,6 @@ btnMultiplication.addEventListener('click', g('*'), false)
 btnMinus.addEventListener('click', g('-'), false)
 btnAddition.addEventListener('click', g('+'), false)
 
-
 btnDot.addEventListener('click', function () {
   number.value += '.'
 }, false)
@@ -118,3 +117,19 @@ btnEquals.addEventListener('click', function () {
   n = 0
   operation = ''
 }, false)
+
+
+const keypad = document.querySelector('#keypad')
+const keypadExtend = document.querySelector('#keypad-extend')
+
+const btnMore = document.querySelector('#btn-more')
+const btnBack = document.querySelector('#btn-back')
+
+const toggleKeypad = function () {
+  keypad.classList.toggle('hidden')
+  keypadExtend.classList.toggle('hidden')
+}
+
+btnMore.addEventListener('click', toggleKeypad, false)
+btnBack.addEventListener('click', toggleKeypad, false)
+

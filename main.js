@@ -52,7 +52,7 @@ for (let app of apps) {
   grid.appendChild(elm)
 }
 
-const search = document.querySelector('.search')
+const search = document.querySelector('#search')
 const appList = document.querySelectorAll('.app')
 
 if (search) {

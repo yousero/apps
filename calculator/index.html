@@ -20,7 +20,7 @@
           <div class="calc-wrapper">
             <!-- TODO: INPUT, HISTORY  -->
             <div><input type="text" name="number" id="number" class="calc-input" /></div>
-            <div class="keypad">
+            <div id="keypad">
               <div class="calc-row">
                 <button id="btn-ac" class="btn">AC</button>
                 <button id="btn-sqrt" class="btn">√</button>
@@ -37,7 +37,7 @@
                 <button id="btn-4" class="btn">4</button>
                 <button id="btn-5" class="btn">5</button>
                 <button id="btn-6" class="btn">6</button>
-                <button id="btn-minus" class="btn">-</button>
+                <button id="btn-minus" class="btn">−</button>
               </div>
               <div class="calc-row">
                 <button id="btn-1" class="btn">1</button>
@@ -52,14 +52,37 @@
                 <button id="btn-equals" class="btn">=</button>
               </div>
             </div>
-            <div class="keypad-extend hidden">
+            <div id="keypad-extend" class="hidden">
               <div class="calc-row">
                 <button id="btn-back" class="btn">↩</button>
+                <button id="btn-sin" class="btn">sin</button>
+                <button id="btn-cos" class="btn">cos</button>
+                <button id="btn-tan" class="btn">tan</button>
               </div>
-              <!-- TODO: ADD BUTTONS  -->
-              <!-- ↩ sin cos tan 
-                   ! ^ log ln
-                   RND π e deg/rad -->
+              <div class="calc-row">
+                <button id="btn-" class="btn">^</button>
+                <button id="btn-factorial" class="btn">!</button>
+                <button id="btn-log" class="btn">log</button>
+                <button id="btn-ln" class="btn">ln</button>
+              </div>
+              <div class="calc-row">
+                <button id="btn-pi" class="btn">π</button>
+                <button id="btn-e" class="btn">e</button>
+                <button id="btn-degrad" class="btn">DEG</button>
+                <button id="btn-rnd" class="btn">RND</button>
+              </div>
+              <div class="calc-row invisible">
+                <button class="btn"></button>
+                <button class="btn"></button>
+                <button class="btn"></button>
+                <button class="btn"></button>
+              </div>
+              <div class="calc-row invisible">
+                <button class="btn"></button>
+                <button class="btn"></button>
+                <button class="btn"></button>
+                <button class="btn"></button>
+              </div>
             </div>
           </div>
         </div>

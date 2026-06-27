@@ -31,6 +31,7 @@
 .search {
   height: 64px;
   width: 100%;
+  margin-bottom: 10px;
   border-radius: 0;
   border: 1px solid #010404;
   font-size: 32px;
@@ -94,6 +95,9 @@
   display: none;
 }
 
+.invisible {
+  visibility: hidden;
+}
 
 @media screen and (max-width: 670px) {
   .section {
