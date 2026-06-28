@@ -18,6 +18,7 @@ const f = function () {
       case '-': n -= num; break
       case '*': n *= num; break
       case '/': n /= num; break
+      case '^': n = Math.pow(n, num); break
     }
   }
 }
@@ -81,7 +82,12 @@ btnAC.addEventListener('click', function (e) {
 }, false)
 
 btnSQRT.addEventListener('click', function () {
-  number.value = Math.round(Math.sqrt(parseFloat(number.value)) * 100) / 100
+  if (number.value) {
+    n = parseFloat(number.value)
+  }
+  n = Math.sqrt(n)
+  answer.textContent = Math.round(n * 10000) / 10000
+  number.value = ''
 }, false)
 
 const buttons = [btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9]
@@ -107,7 +113,9 @@ btnMinus.addEventListener('click', g('-'), false)
 btnAddition.addEventListener('click', g('+'), false)
 
 btnDot.addEventListener('click', function () {
-  number.value += '.'
+  if (!number.value.includes('.')) {
+    number.value += '.'
+  }
 }, false)
 btnBackspace.addEventListener('click', function () {
   number.value = number.value.slice(0, number.value.length - 1)
@@ -118,7 +126,7 @@ const answer = document.querySelector('#answer')
 btnEquals.addEventListener('click', function () {
   f()
   number.value = ''
-  answer.textContent = Math.round(n * 100) / 100
+  answer.textContent = Math.round(n * 10000) / 10000
   operation = ''
 }, false)
 
@@ -137,3 +145,100 @@ const toggleKeypad = function () {
 btnMore.addEventListener('click', toggleKeypad, false)
 btnBack.addEventListener('click', toggleKeypad, false)
 
+const btnSin = document.querySelector('#btn-sin')
+const btnCos = document.querySelector('#btn-cos')
+const btnTan = document.querySelector('#btn-tan')
+
+let deg = true
+
+btnSin.addEventListener('click', function () {
+  if (number.value == '' && answer.textContent != '') {
+    answer.textContent = Math.sin(n)
+  } else {    
+    answer.textContent = Math.sin(number.value)
+  }
+  number.value = ''
+}, false)
+btnCos.addEventListener('click', function () {
+  if (number.value == '' && answer.textContent != '') {
+    answer.textContent = Math.cos(n)
+  } else {    
+    answer.textContent = Math.cos(number.value)
+  }
+  number.value = ''
+}, false)
+btnTan.addEventListener('click', function () {
+  if (number.value == '' && answer.textContent != '') {
+    answer.textContent = Math.tan(n)
+  } else {    
+    answer.textContent = Math.tan(number.value)
+  }
+  number.value = ''
+}, false)
+
+const btnPower = document.querySelector('#btn-power')
+const btnFactorial = document.querySelector('#btn-factorial')
+const btnLog = document.querySelector('#btn-log')
+const btnLn = document.querySelector('#btn-ln')
+
+const btnPi = document.querySelector('#btn-pi')
+const btnE = document.querySelector('#btn-e')
+const btnDegRad = document.querySelector('#btn-degrad')
+const btnRnd = document.querySelector('#btn-rnd')
+
+btnPower.addEventListener('click', g('^'), false)
+
+const factorial = function (num) {
+  let x = 1
+  let y = 1
+  while (x < num) {
+    y *= x
+    x += 1
+  }
+  return y
+}
+
+btnFactorial.addEventListener('click', function () {
+  if (number.value == '' && answer.textContent != '') {
+    answer.textContent = factorial(n)
+  } else {    
+    answer.textContent = factorial(number.value)
+  }
+  number.value = ''
+}, false)
+
+btnLog.addEventListener('click', function () {  
+  if (number.value == '' && answer.textContent != '') {
+    answer.textContent = Math.log10(n)
+  } else {    
+    answer.textContent = Math.log10(number.value)
+  }
+  number.value = ''
+}, false)
+btnLn.addEventListener('click', function () {  
+  if (number.value == '' && answer.textContent != '') {
+    answer.textContent = Math.log(n)
+  } else {    
+    answer.textContent = Math.log(number.value)
+  }
+  number.value = ''
+}, false)
+
+btnPi.addEventListener('click', function () {
+  number.value = Math.PI
+}, false)
+btnE.addEventListener('click', function () {
+  number.value = Math.E
+}, false)
+
+btnDegRad.addEventListener('click', function () {
+  deg = !deg
+  if (deg) {
+    btnDegRad.textContent = 'DEG'
+  } else {
+    btnDegRad.textContent = 'RAD'
+  }
+}, false)
+btnRnd.addEventListener('click', function () {
+  number.value = Math.round(Math.random() * 1000000000) / 1000000000
+}, false)
